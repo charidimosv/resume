@@ -52,14 +52,17 @@ Last Updated on \today % Last Updated text
 %----------------------------------------------------------------------------------------
 
 \newcommand{\namesection}[3]{ % Defines the command for the main heading
-\raggedleft{ % Center the name
-\fontsize{40pt}{60pt} % Font size
-\fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1 % First name font
-\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2 % Last name font
-} \\[5pt] % Whitespace between the name and contact information
-\raggedleft{ % Center the contact information
-\color{headings} % Use the headings color
+\color{headings}
+\raggedleft{
+{
+\scshape\fontsize{40pt}{60pt}
+\fontspec[Path = fonts/raleway/]{Raleway-Regular}\selectfont #1 % First name font
+\fontspec[Path = fonts/raleway/]{Raleway-Medium}\selectfont #2 % Last name font
+}
+\\[5pt] % Whitespace between the name and contact information
+{
 \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3} % Contact information font
+}
 \noindent\makebox[\linewidth]{\color{headings}\rule{0.9\paperwidth}{0.4pt}} % Horizontal rule
 \vspace{-5pt} % Reduce whitespace after the rule slightly
 }
@@ -75,19 +78,19 @@ Last Updated on \today % Last Updated text
 \newcommand{\sectionspace}{\vspace{8pt}} % Defines a command to add a set amount of space after sections and subsections
 
 \titleformat{\section}{ % Customize the large section titles
-\color{headings}\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\color{headings}\scshape\fontspec[Path = fonts/raleway/]{Raleway-Bold}\fontsize{18pt}{24pt}\selectfont}{}{0em}{}
 
 \titleformat{\subsection}{ % Customize the subsections and places worked/studied titles
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{subheadings}\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{14pt}{14pt}\selectfont}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{ % Used for creating subsections where a description is required on the same line
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\color{subheadings}\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{12pt}\selectfont {#1}}
 
 \newcommand{\descript}[1]{ % Used for describing the subsection either on the same line or underneath
 \color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 \newcommand{\subdescript}[1]{ % Used for describing the subsection either on the same line or underneath
-\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1 \\} \normalfont}
+\color{headings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 \newcommand{\lowsubdescript}[1]{ % Used for describing the subsection either on the same line or underneath
 \color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1 \\} \normalfont}
